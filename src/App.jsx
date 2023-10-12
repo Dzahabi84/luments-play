@@ -6,6 +6,8 @@ import {
 } from "react-router-dom"
 import RootLayout from "./layout/RootLayout"
 import Home from "./pages/Home"
+import { discover } from "./loader"
+import ApiDataProvider from "./context/ApiData"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -28,7 +30,11 @@ const router = createBrowserRouter(
 
 function App() {
   return (
-    <RouterProvider router={router}/>
+    <div className="bg-black-900 h-screen box-border">
+      <ApiDataProvider>
+        <RouterProvider router={router}/>
+      </ApiDataProvider>
+    </div>
   )
 }
 
