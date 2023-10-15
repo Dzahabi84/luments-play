@@ -6,7 +6,7 @@ import { useEffect } from "react";
 const MovieDetail = () => {
   const data = useLoaderData();
   useEffect(() => {
-    document.title = data.original_title
+    document.title = data.original
   }, [])
   return (
       <div className="relative flex h-full m-auto justify-center w-10/12 md:[800px] lg:w-[1000px]">
