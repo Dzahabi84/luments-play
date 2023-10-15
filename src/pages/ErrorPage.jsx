@@ -1,6 +1,10 @@
+import { useEffect } from "react"
 import { useRouteError, Link} from "react-router-dom"
 
 export default function ErrorPage () {
+    useEffect(() => {
+        document.title = "404 Error"
+      }, [])
     const err = useRouteError()
     console.log(err);
     return (
