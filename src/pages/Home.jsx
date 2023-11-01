@@ -5,9 +5,6 @@ import { Carousel, IconButton } from "@material-tailwind/react";
 
 const Home = () => {
   const data = useLoaderData()
-  console.log(
-    data
-  );
   if (data.isLoading) {
     return null;
   } else {
